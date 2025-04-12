@@ -58,22 +58,23 @@ For example, **bash autorun.sh 8e870efd2345ba2549f7cb10b920c94baf38f17d DataSoft
 
 Finally, there is a traversal output file named "log_[repo_name]_[sha_id]_[traversal_direction]", which contains the cross-language control flow path.
 
-The below result means no cross-language path has been found:
-========starting traverse
-function name:yyparse, start_line_number:1916
-=============Done=============
+The below result means no cross-language path has been found:\
+========starting traverse\
+function name:yyparse, start_line_number:1916\
+=============Done=============\
 
-The below result means cross-language path has been found:
-========starting traverse
-function name:pixels2d, start_line_number:132
-mapping by 132(py__numpysurfarray_4-cfg.dot) (pixels2d),and 2170(c_surface_114-cfg.dot) (surf_get_view)
-func_count:30
-len:49
-Path
-: 132(py__numpysurfarray_4-cfg.dot) (pixels2d)
- -> 2170(c_surface_114-cfg.dot) (surf_get_view)
- -> 2168(c_surface_114-cfg.dot) (surf_get_view)
- ...
+The below result means cross-language path has been found:\
+========starting traverse\
+function name:pixels2d, start_line_number:132\
+mapping by 132(py__numpysurfarray_4-cfg.dot) (pixels2d),and 2170(c_surface_114-cfg.dot) (surf_get_view)\
+func_count:30\
+len:49\
+Path\
+: 132(py__numpysurfarray_4-cfg.dot) (pixels2d)\
+ -> 2170(c_surface_114-cfg.dot) (surf_get_view)\
+ -> 2168(c_surface_114-cfg.dot) (surf_get_view)\
+ ...\
+ 
 
 ### Manual_Bug_Analysis_Result
 In "Manual Bug Analysis Result" folder, there are four files, which are "javac_case_study.xlsx", "pyc_case_study.xlsx", "Case_Study_[Python-C]_raw_data.docx" and "Case_Study_[Java-C]_raw_data.docx".
