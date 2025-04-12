@@ -6,6 +6,20 @@ This is the artifact of the paper *Dissecting Real-World Cross-Language Bugs*
 This artifact contains the tools in methodology and manual bug analysis result.
 
 ## 2. Directory structure
+.
+├── Repository_Mining
+│   ├── getrepo.py
+│   └── getcommits.py
+├── CLB_Commit_Classification
+│   ├── getbugfixing.py
+│   ├── Cross-Language_Code_Revision_Identification
+│   └── Cross-Language-Bug-Fixing_Commit_Identification
+└── Manual_Bug_Analysis_Result
+    ├── javac_case_study.xlsx
+    ├── pyc_case_study.xlsx
+    ├── Case_Study_[Python-C]_raw_data.docx
+    └── Case_Study_[Java-C]_raw_data.docx
+
 Repository_Mining - This folder contains the tools of crawling repository list and get commits of each repository. 
 
 CLB_Commit_Classification - This folder contains the tools used for identifying bug-fixing commit, cross-language code revision and cross-language-bug-fixing commit.
@@ -48,7 +62,7 @@ Execute **cd Cross-Language-Bug-Fixing_Commit_Identification && python getinter.
 #### <u>Cross-Language-Bug-Fixing_Commit_Identification</u>
 First, users need to configure "file_name" as the input in runtool.sh. By default, this is set to "pyc_inter_bug_commits.csv".
 
-Second, users need to configure "start_line" and "end_line" to specify the start and end index of the commits in the input file . By default, this is set to "1" and "20", which means the first 20 commints in the input file can be generated CICFG.
+Second, users need to configure "start_line" and "end_line" to specify the start and end index of the commits in the input file . By default, this is set to "1" and "2", which means the first 2 commints in the input file can be generated CICFG.
 
 Then, executing **bash runtool.sh** will start the generation of CICFGs for the specified commits. Note that if the repository of the commits is large, this process may take some time.
 
@@ -94,3 +108,29 @@ This file includes the detailed raw data about each commits among Python-C.
 
 #### <u>"Case_Study_[Java-C]_raw_data.docx</u>
 This file includes the detailed raw data about each commits among Java-C.
+
+
+## 4. Artifact Badge Checks
+This section explains how to verify the FSE artifact badges for **Availability**, **Functionality**, and **Reusability**.
+
+### Availability
+- **Artifact Location:**  
+The complete artifact (all scripts, data, and documentation) is publicly accessible via this repository (or the provided permanent URL).  
+
+
+### Functionality
+- **Core Functionality:**
+1. Each script and tool (e.g., repository mining, commit classification, CICFG generation, and traversal) is included with the necessary instructions.
+2. The artifact’s directory structure mirrors the workflow described.
+- **Verification Steps:**
+1. Follow the provided instructions in Section 3 to run the scripts sequentially.
+2. Verify that executing the commands (e.g., running `python getrepo.py` or `bash runtool.sh`) produces the expected output files as indicated.
+
+### Reusability
+- **Documentation & Modularity:**
+1. Inline comments in the source code clarify configurable parameters (such as GitHub tokens, star thresholds, language settings).
+2. The modular design of the artifact allows users to adapt the individual components (e.g., change the repository selection criteria or adjust the commit range for CICFG generation).
+- **Verification Steps:**
+1. Check that the README outlines how to adjust script parameters (e.g., modifying the `stars_split` list or input file paths).
+2. Confirm that the artifact includes detailed instructions and example usage that facilitate reusing the code for alternative scenarios or extended studies.
+
