@@ -6,6 +6,7 @@ This is the artifact of the paper *Dissecting Real-World Cross-Language Bugs*
 This artifact contains the tools in methodology and manual bug analysis result.
 
 ## 2. Directory structure
+```
 .
 ├── Repository_Mining
 │   ├── getrepo.py
@@ -19,6 +20,7 @@ This artifact contains the tools in methodology and manual bug analysis result.
     ├── pyc_case_study.xlsx
     ├── Case_Study_[Python-C]_raw_data.docx
     └── Case_Study_[Java-C]_raw_data.docx
+```
 
 Repository_Mining - This folder contains the tools of crawling repository list and get commits of each repository. 
 
